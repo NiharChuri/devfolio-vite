@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 
 // Optional: Separate component for the diagonal arrow
 const DiagonalArrow = () => {
-  // Using the Unicode character for the diagonal upward arrow
   return <span>{String.fromCharCode(0x2197)}</span>; // ↗ (U+2197)
 };
 
@@ -14,10 +13,8 @@ const Contact = () => {
     triggerOnce: false, // Allow animation to trigger every time it comes into view
   });
 
-  // State to manage the animation visibility
   const [animationState, setAnimationState] = useState('hidden'); // Start hidden
 
-  // Effect to trigger animation when in view
   useEffect(() => {
     if (inView) {
       setAnimationState('visible'); // Set to visible when in view
@@ -26,7 +23,6 @@ const Contact = () => {
     }
   }, [inView]);
 
-  // Animation variants for fade-in effect
   const fadeIn = {
     hidden: { opacity: 0, y: 80 }, // Start hidden and slightly below
     visible: { opacity: 1, y: 0 },  // Fade in and move to original position
@@ -35,7 +31,7 @@ const Contact = () => {
   return (
     <motion.div
       id="contact"
-      ref={ref} // Attach the ref to the motion div
+      ref={ref}
       className="flex flex-col min-h-screen items-left justify-center"
     >
       <div>
@@ -46,13 +42,14 @@ const Contact = () => {
         <motion.p
           className="text-lg mb-10"
           initial="hidden"
-          animate={animationState} // Animate based on the state
+          animate={animationState}
           variants={fadeIn}
-          transition={{ duration: 0.5 }} // Duration for this specific link
+          transition={{ duration: 0.5 }}
         >
           <a
             href="mailto:neelshha@gmail.com"
-            className="relative text-2xl sm:text-4xl md:text-5xl leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"
+            className="relative text-2xl sm:text-4xl md:text-5xl leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan overflow-visible before:absolute before:bottom-[-8px] before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500 before:ease-in-out"
+            style={{ lineHeight: '1.2' }} // Increase line height to provide space for descenders
           >
             neelshha@gmail.com <DiagonalArrow />
           </a>
@@ -64,15 +61,16 @@ const Contact = () => {
               key={link}
               className="text-lg"
               initial="hidden"
-              animate={animationState} // Animate based on the state
+              animate={animationState}
               variants={fadeIn}
-              transition={{ duration: 0.5, delay: index * 0.3 }} // Stagger the delay for each link
+              transition={{ duration: 0.5, delay: index * 0.3 }}
             >
               <a
                 href={link === 'LinkedIn' ? "https://www.linkedin.com" : "https://www.instagram.com"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative text-2xl sm:text-4xl md:text-5xl mb-5 leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"
+                className="relative text-2xl sm:text-4xl md:text-5xl mb-5 leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan overflow-visible before:absolute before:bottom-[-8px] before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500 before:ease-in-out"
+                style={{ lineHeight: '1.2' }} // Increase line height for links as well
               >
                 {link} <DiagonalArrow />
               </a>
