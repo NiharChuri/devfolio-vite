@@ -30,6 +30,7 @@ export const skills = [
   { name: "JavaScript", imgSrc: javascriptImg },
   { name: "React", imgSrc: reactImg },
   { name: "Tailwind CSS", imgSrc: tailwindImg },
+  { name: "Framer Motion", imgSrc: framerImg },
   { name: "Python", imgSrc: pythonImg },
   { name: "Java", imgSrc: javaImg },
   { name: "SQL", imgSrc: sqlImg },
@@ -63,35 +64,4 @@ export const projects = [
   },
   
   // Add more projects as needed
-];
-
-
-
-export const footerLinks = [
-  {
-    href: "#",
-    text: "Development tools: ",
-    imgSrcReact: reactImg,
-    imgSrcFramer: framerImg,
-  },
-  {
-    href: "https://www.linkedin.com/in/yourusername",
-    text: "LinkedIn",
-    icon: <FaLinkedin className="text-2xl" />
-  },
-  {
-    href: "https://github.com/yourusername",
-    text: "Github",
-    icon: <FaGithub className="text-2xl" />
-  },
-  {
-    href: "https://www.instagram.com/yourusername",
-    text: "Instagram",
-    icon: <FaInstagram className="text-2xl" />
-  },
-  {
-    href: "mailto:youremail@example.com",
-    text: "Email",
-    icon: <FaEnvelope className="text-2xl" />
-  },
 ];
