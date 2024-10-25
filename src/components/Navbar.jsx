@@ -114,7 +114,7 @@ const Navbar = ({ scrollToSection }) => {
                 <motion.div className="relative inline-block">
                   <motion.button
                     onClick={() => scrollToSection(item.section)} 
-                    className={`text-[0.7rem] text-white transition-all duration-300 ease-in-out transform ${activeSection === item.section ? 'border-none text-blink bg-gradient-to-r from-yellow to-cyan rounded-full px-2 py-1 shadow-lg scale-105' : 'hover:bg-gradient-to-r from-yellow to-cyan bg-clip-text hover:shadow-xl hover:scale-110 hover:translate-y-1 rounded-md'}`}
+                    className={`text-[0.7rem] transition-all duration-300 ease-in-out transform ${activeSection === item.section ? 'border-none text-blink bg-gradient-to-r from-yellow to-cyan rounded-full px-2 py-1 shadow-lg scale-105' : 'hover:bg-gradient-to-r from-yellow to-cyan bg-clip-text hover:shadow-xl hover:scale-110 hover:translate-y-1 rounded-md'}`}
                   > 
                     {item.label}
                   </motion.button>
