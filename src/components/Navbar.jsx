@@ -75,7 +75,7 @@ const Navbar = ({ scrollToSection }) => {
                 >
                   <motion.button 
                     onClick={() => scrollToSection(item.section)} 
-                    className={`text-white transition-all duration-500 ease-in-out transform ${activeSection === item.section ? 'border-none text-black bg-gradient-to-r from-yellow to-cyan rounded-full px-4 py-2 shadow-lg scale-105' : 'hover:bg-gradient-to-r from-yellow to-cyan bg-clip-text hover:shadow-xl hover:scale-110 hover:translate-y-1'}`}
+                    className={`transition-all duration-500 ease-in-out transform ${activeSection === item.section ? 'border-none text-black bg-gradient-to-r from-yellow to-cyan rounded-full px-4 py-2 shadow-lg scale-105' : 'hover:bg-gradient-to-r from-yellow to-cyan bg-clip-text hover:shadow-xl hover:scale-110 hover:translate-y-1'}`}
                   >
                     {item.label}
                   </motion.button>

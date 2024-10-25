@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+// Optional: Separate component for the diagonal arrow
+const DiagonalArrow = () => {
+  // Using the Unicode character for the diagonal upward arrow
+  return <span>{String.fromCharCode(0x2197)}</span>; // ↗ (U+2197)
+};
+
 const Contact = () => {
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger when 10% of the section is visible
@@ -46,8 +52,9 @@ const Contact = () => {
         >
           <a
             href="mailto:neelshha@gmail.com"
-            className="relative text-2xl sm:text-4xl md:text-5xl leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"          >
-            neelshha@gmail.com <span className="ml-1">↗</span>
+            className="relative text-2xl sm:text-4xl md:text-5xl leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"
+          >
+            neelshha@gmail.com <DiagonalArrow />
           </a>
         </motion.p>
 
@@ -65,8 +72,9 @@ const Contact = () => {
                 href={link === 'LinkedIn' ? "https://www.linkedin.com" : "https://www.instagram.com"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative text-2xl sm:text-4xl md:text-5xl mb-5 leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"              >
-                {link} <span className="ml-1">↗</span>
+                className="relative text-2xl sm:text-4xl md:text-5xl mb-5 leading-relaxed inline-block hover:text-transparent bg-clip-text bg-gradient-to-r from-yellow to-cyan before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500"
+              >
+                {link} <DiagonalArrow />
               </a>
             </motion.p>
           ))}
