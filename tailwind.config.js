@@ -4,11 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'yellow': '#4286f4',
-        'cyan': '#373B44',
+        'yellow': '#a7fd00',
+        'cyan': '#09ff9b',
         'blink': '#121212'
       },
-      
     },
   },
   plugins: [],
