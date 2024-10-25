@@ -8,8 +8,5 @@
 :root {
   font-family: "Poppins", sans-serif; /* Set Poppins as the default font */
   color-scheme: dark; /* Indicates support for dark mode */
-}
-
-.html{
   background: #121212;
 }
