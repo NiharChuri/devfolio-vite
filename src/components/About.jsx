@@ -64,7 +64,7 @@ const About = () => {
                     animate={controls}
                 >
                     <motion.p 
-                        className="text-xs md:text-xl lg:text-2xl leading-relaxed mb-6"
+                        className="text-sm md:text-sm lg:text-2xl leading-relaxed mb-6"
                         variants={textVariants}
                     >
                         Hi, I'm Neel Shah, a passionate software developer specializing in Webdesign and UI/UX, with a focus 
@@ -73,7 +73,7 @@ const About = () => {
                         of Technology Management and Engineering, with an expected graduation in 2026.
                     </motion.p>
                     <motion.p 
-                        className="text-xs md:text-xs lg:text-2xl leading-relaxed"
+                        className="text-sm md:text-sm lg:text-2xl leading-relaxed"
                         variants={textVariants}
                     > 
                         I thrive on turning ideas into efficient, scalable, and user-friendly solutions. 
