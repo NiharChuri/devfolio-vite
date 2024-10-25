@@ -7,35 +7,37 @@ const Loading = () => {
 
   useEffect(() => {
     const totalDuration = 2000; // Total loading duration in milliseconds
-    const intervalTime = 100; // Update percentage every 100ms
-    const step = 100 / (totalDuration / intervalTime); // Calculate percentage step
+    const incrementDuration = 100; // Duration for each increment
+    const totalSteps = totalDuration / incrementDuration; // Total steps for percentage updates
+    const step = 100 / totalSteps; // Calculate percentage step
 
-    // Start percentage counter
-    const percentageInterval = setInterval(() => {
-      setPercentage(prev => {
-        if (prev >= 100) {
-          clearInterval(percentageInterval); // Stop at 100%
-          return 100;
-        }
-        return Math.min(prev + step, 100); // Increment by calculated step
-      });
-    }, intervalTime);
+    let currentStep = 0; // Current step counter
+
+    // Start percentage counter using requestAnimationFrame
+    const updatePercentage = () => {
+      if (currentStep < totalSteps) {
+        setPercentage(prev => Math.min(prev + step, 100)); // Increment by calculated step
+        currentStep++;
+        requestAnimationFrame(updatePercentage); // Continue the update
+      }
+    };
+
+    updatePercentage(); // Start the percentage updates
 
     // Trigger controls to slide up after the loading duration
     const timer = setTimeout(() => {
       controls.start({ y: '-100%', transition: { duration: 1 } }); // Slide up effect
-      clearInterval(percentageInterval); // Clear the interval once the loading is done
+      setPercentage(100); // Ensure percentage is set to 100% at the end
     }, totalDuration);
 
     return () => {
       clearTimeout(timer); // Cleanup on unmount
-      clearInterval(percentageInterval); // Cleanup interval on unmount
     };
   }, [controls]);
 
   return (
     <motion.div
-      className="flex h-screen relative max-w-[90%] lg-w-[70%] bg-[#121212] justify-center items-center"
+      className="flex h-screen relative max-w-[90%] lg:w-[70%] bg-[#121212] justify-center items-center"
       initial={{ opacity: 1 }}
       animate={controls}
       exit={{ opacity: 0 }} // Animate exit opacity for smoother transition
