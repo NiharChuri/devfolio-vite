@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div id="hero" className="flex flex-col min-h-screen items-left justify-center">
+    <div id="hero" className="bg-blink max-w-7xl mx-auto w-[90%] lg:w-[70%] px-6 flex flex-col min-h-screen items-left justify-center">
       <motion.h1
         className="text-4xl sm:text-6xl lg:text-8xl text-left tracking-wide font-bold"
         initial={{ opacity: 0, y: -50 }}
