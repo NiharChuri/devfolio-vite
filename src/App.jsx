@@ -35,7 +35,7 @@ const App = () => {
       ) : (
         <>
           <Navbar scrollToSection={scrollToSection} /> {/* Pass the scroll function as a prop */}
-          <div className=" ">
+          <div className=" max-w-7xl mx-auto w-[90%] lg:w-[70%] px-6">
             <HeroSection />
             <About />
             <Skill />
