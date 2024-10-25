@@ -67,20 +67,20 @@ const About = () => {
                         className="text-xs md:text-xl lg:text-2xl leading-relaxed mb-6"
                         variants={textVariants}
                     >
-                        Hi, I'm Neel Shah, a passionate developer blending creativity with
-                        technical precision. My journey started with a deep fascination for
-                        technology and has evolved into a pursuit of creating impactful
-                        digital experiences. With a background in Computer Science & Cybersecurity,
-                        I'm driven by the desire to craft solutions that are both visually appealing
-                        and functionally robust.
+                        Hi, I'm Neel Shah, a passionate software developer specializing in Webdesign and UI/UX, with a focus 
+                        on frameworks like React.js and Tailwind CSS. Currently, I’m pursuing a Bachelor’s 
+                        degree in Computer Science with specialisation in Cybersecurity at Mukesh Patel School 
+                        of Technology Management and Engineering, with an expected graduation in 2026.
                     </motion.p>
                     <motion.p 
                         className="text-xs md:text-xs lg:text-2xl leading-relaxed"
                         variants={textVariants}
-                    >
-                        Whether it's working on animations, responsive web design, or developing
-                        branding for a project like 'Wake & Whiskey', I strive to push the limits of
-                        innovation, creating seamless, user-centric designs that blend passion with pixels.
+                    > 
+                        I thrive on turning ideas into efficient, scalable, and user-friendly solutions. 
+                        My collaborative approach ensures that I work closely with clients to understand their 
+                        needs and deliver results that solve real-world problems. I believe in the power of 
+                        technology to make a difference, and I’m excited to take on new challenges and opportunities. 
+                        I strive to push the limits of innovation, creating seamless, user-centric designs that blend passion with pixels.
                     </motion.p>
                 </motion.div>
             </div>
