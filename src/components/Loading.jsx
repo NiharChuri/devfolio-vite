@@ -37,7 +37,7 @@ const Loading = () => {
 
   return (
     <motion.div
-      className="flex h-screen relative max-w-[90%] lg:w-[70%] bg-[#121212] justify-center items-center"
+      className="flex h-screen relative max-w-[90%] lg:w-[70%] bg-[#121212] justify-right items-right"
       initial={{ opacity: 1 }}
       animate={controls}
       exit={{ opacity: 0 }} // Animate exit opacity for smoother transition
