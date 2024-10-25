@@ -53,7 +53,7 @@ const Work = () => {
   };
 
   return (
-    <div id="work" className="p-8 md:p-16" ref={ref}>
+    <div id="work" className="" ref={ref}>
       <h1 className="text-lg sm:text-lg lg:text-lg text-center tracking-wide font-bold mb-[10%]">
         My Work
       </h1>
