@@ -8,6 +8,7 @@ export default {
         'cyan': '#373B44',
         'blink': '#121212'
       },
+      
     },
   },
   plugins: [],
