@@ -66,7 +66,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
               <a
-                href={link === 'LinkedIn' ? "https://www.linkedin.com" : "https://www.instagram.com"}
+                href={link === 'LinkedIn' ? "https://www.linkedin.com/in/neelshha/" : "https://www.instagram.com/neelshha/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative text-2xl sm:text-4xl md:text-5xl mb-5 leading-relaxed inline-block text-white hover:text-white overflow-visible before:absolute before:bottom-[-8px] before:left-0 before:h-[2px] before:w-0 before:bg-gradient-to-r before:from-yellow before:to-cyan hover:before:w-full before:transition-all before:duration-500 before:ease-in-out"
