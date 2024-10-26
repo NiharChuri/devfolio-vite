@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
     const controls = useAnimation();
     const { ref, inView } = useInView({
-        threshold: 0.2, // Trigger when 20% of the section is visible
+        threshold: 0.1, // Trigger when 20% of the section is visible
         triggerOnce: false, // Ensures the animation happens again when coming back to view
     });
 
