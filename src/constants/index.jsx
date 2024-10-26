@@ -14,7 +14,6 @@ import framerImg from "../assets/framer.png";
 import cyberImg from "../assets/cyber.png";
 import munsocImg from "../assets/munsoc.png";
 import techfestImg from "../assets/techfest.png";
-import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub} from 'react-icons/fa';
 
 export const navItems = [
   { label: "Home", section: "hero"},

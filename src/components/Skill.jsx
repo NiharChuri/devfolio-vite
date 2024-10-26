@@ -80,7 +80,7 @@ const Skill = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-end text-center rounded-lg shadow-md mb-3 sm:mb-10"
+              className="flex flex-col items-center justify-end text-center rounded-lg mb-3 sm:mb-10"
               variants={itemVariants}
               whileHover="hover" // Apply hover animations
             >
