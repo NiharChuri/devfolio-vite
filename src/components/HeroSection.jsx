@@ -24,20 +24,10 @@ const HeroSection = () => {
         Blending Passion<br />
         with Pixels
       </motion.h1>
-      {/* Uncomment if you want to include this paragraph */}
-      {/* <motion.p
-        className="mt-1 text-base sm:text-lg lg:text-xl text-left text-neutral-500 max-w-4xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        Empower your creativity and bring your VR app ideas to life with our
-        intuitive development tools. Get started today and turn your imagination
-        into immersive reality!
-      </motion.p> */}
       <div className="flex flex-col pt-5 md:flex-row md:flex-wrap justify-left my-10">
         <motion.a
-          href="#"
+          href="/NeelShahResume.pdf"
+          download
           className="bg-gradient-to-r from-yellow to-cyan py-3 px-6 mx-5 rounded-full text-blink border text-center text-sm md:text-base mb-2 md:mb-0"
           whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)" }}
           whileTap={{ scale: 0.95 }}
