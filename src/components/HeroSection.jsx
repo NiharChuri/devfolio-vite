@@ -26,8 +26,8 @@ const HeroSection = () => {
       </motion.h1>
       <div className="flex flex-col pt-5 md:flex-row md:flex-wrap justify-left my-10">
         <motion.a
-          href="/NeelShahResume.pdf"
-          download
+          href='src/assets/NeelShahResume.pdf'
+          download="NeelShahResume.pdf"
           className="bg-gradient-to-r from-yellow to-cyan py-3 px-6 mx-5 rounded-full text-blink border text-center text-sm md:text-base mb-2 md:mb-0"
           whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)" }}
           whileTap={{ scale: 0.95 }}
