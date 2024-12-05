@@ -30,7 +30,7 @@ const HeroSection = () => {
       </motion.h1>
       <div className="flex flex-col pt-5 md:flex-row md:flex-wrap justify-left my-10 gap-4">
         <motion.a
-          href="../src/assets/NeelShahResume.pdf"
+          href={NeelShahResume}
           download="NeelShahResume.pdf"
           className="bg-gradient-to-r from-yellow to-cyan py-3 px-6 rounded-full text-black border text-center text-sm md:text-base shadow-md"
           whileHover={{
