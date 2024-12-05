@@ -1,89 +1,61 @@
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 const About = () => {
-    const controls = useAnimation();
-    const { ref, inView } = useInView({
-        threshold: 0.1, // Trigger when 20% of the section is visible
-        triggerOnce: false, // Ensures the animation happens again when coming back to view
-    });
-
-    // When the section is in view, start the animation
-    useEffect(() => {
-        if (inView) {
-            controls.start('visible');
-        } else {
-            controls.start('hidden'); // Reset animation when out of view
-        }
-    }, [controls, inView]);
-
-    // Subtler animation variants
+    // Animation variants
     const containerVariants = {
-        hidden: { opacity: 0, y: -20, scale: 0.98 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
-            scale: 1, 
-            transition: {
-                duration: 1.2, 
-                ease: [0.25, 0.1, 0.25, 1], // Smoother easing curve
-            }
-        }
-    };
-
-    const textVariants = {
-        hidden: { opacity: 0, y: 20, scale: 0.98 },
+        hidden: { opacity: 0, y: 50 },
         visible: {
             opacity: 1,
             y: 0,
-            scale: 1,
             transition: {
-                duration: 1.2,
-                ease: [0.25, 0.1, 0.25, 1],
-                delayChildren: 0.2, // Subtle delay for child elements
-                staggerChildren: 0.1, // Faster stagger for subtle cascading effect
-            }
-        }
+                duration: 1,
+                ease: "easeOut",
+                staggerChildren: 0.3, // Stagger the animation of child elements
+            },
+        },
+    };
+
+    const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
     };
 
     return (
-        <section id="about" ref={ref} className="flex flex-col min-h-screen items-left justify-center">
-            <div className="max-w-7xl mx-auto">
-                <motion.h2 
+        <section
+            id="about"
+            className="flex flex-col min-h-[70vh] lg:min-h-screen items-left justify-center px-4 md:px-6"
+        >
+            <motion.div
+                className="max-w-7xl mx-auto"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the section is in view
+            >
+                <motion.h2
                     className="text-lg sm:text-lg lg:text-lg text-center tracking-wide font-bold mb-[10%]"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={controls}
+                    variants={textVariants}
                 >
                     About Me
                 </motion.h2>
-                <motion.div
-                    variants={textVariants}
-                    initial="hidden"
-                    animate={controls}
-                >
-                    <motion.p 
+                <motion.div>
+                    <motion.p
                         className="text-sm md:text-sm lg:text-2xl leading-relaxed mb-6"
                         variants={textVariants}
                     >
-                        Hi, I'm Neel Shah, a passionate software developer specializing in Webdesign and UI/UX, with a focus 
-                        on frameworks like React.js and Tailwind CSS. Currently, I’m pursuing a Bachelor’s 
-                        degree in Computer Science with specialisation in Cybersecurity at Mukesh Patel School 
-                        of Technology Management and Engineering, with an expected graduation in 2026.
+                        I’m Neel Shah, a software developer specializing in web design and UI/UX, with expertise in frameworks like React.js 
+                        and Tailwind CSS. I focus on creating efficient, scalable, and user-friendly solutions that solve real-world challenges.
                     </motion.p>
-                    <motion.p 
+                    <motion.p
                         className="text-sm md:text-sm lg:text-2xl leading-relaxed"
                         variants={textVariants}
-                    > 
-                        I thrive on turning ideas into efficient, scalable, and user-friendly solutions. 
-                        My collaborative approach ensures that I work closely with clients to understand their 
-                        needs and deliver results that solve real-world problems. I believe in the power of 
-                        technology to make a difference, and I’m excited to take on new challenges and opportunities. 
-                        I strive to push the limits of innovation, creating seamless, user-centric designs that blend passion with pixels.
+                    >
+                        Currently pursuing a Bachelor’s degree in Computer Science with a specialization in Cybersecurity at Mukesh Patel 
+                        School of Technology Management and Engineering (Class of 2026), I’m passionate about blending innovation with 
+                        functionality to deliver impactful results.
                     </motion.p>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };
