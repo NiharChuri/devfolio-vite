@@ -61,6 +61,4 @@ export const projects = [
     link: "https://www.instagram.com/munsoc_mpstme/",
     tools: [illustratorImg, photoshopImg], // Add tools used for this project
   },
-  
-  // Add more projects as needed
 ];
