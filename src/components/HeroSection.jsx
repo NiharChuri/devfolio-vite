@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import NeelShahResume from "../assets/NeelShahResume.pdf"; // Correct file import
 
 const HeroSection = () => {
   // Smooth scroll function

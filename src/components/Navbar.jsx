@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { id: 'about', label: 'About' },
@@ -53,11 +54,11 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'
+        isScrolled ? 'bg-gradient-to-b from-black to-transparent' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-[50px]">
+        <div className="flex items-center justify-between h-[60px]">
           {/* Logo */}
           <motion.a
             href="#hero"
@@ -99,46 +100,46 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`block w-full h-px bg-white transition-transform ${isMenuOpen ? 'rotate-45' : ''}`} />
-              <span className={`block w-full h-px bg-white transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block w-full h-px bg-white transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-            </div>
-          </motion.button>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
-        <motion.div
-          className={`md:hidden overflow-hidden ${isMenuOpen ? 'h-48' : 'h-0'}`}
-          initial={false}
-          animate={{ height: isMenuOpen ? 'auto' : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="py-4 space-y-4">
-            {navLinks.map(({ id, label }) => (
-              <motion.a
-                key={id}
-                href={`#${id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  smoothScrollTo(id);
-                  setIsMenuOpen(false);
-                }}
-                className={`block text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest ${
-                  activeSection === id ? 'text-white' : ''
-                }`}
-                whileHover={{ scale: 1.05 }}
-              >
-                {label}
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              className="md:hidden"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="py-4 space-y-4 bg-black/10 backdrop-blur-sm">
+                {navLinks.map(({ id, label }) => (
+                  <motion.a
+                    key={id}
+                    href={`#${id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo(id);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`block text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest ${
+                      activeSection === id ? 'text-white' : ''
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {label}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );
