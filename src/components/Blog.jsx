@@ -24,7 +24,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="min-h-screen bg-black py-20">
+    <section id="blog" className="min-h-screen bg-primary-50 dark:bg-dark-900 py-20 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,8 +33,8 @@ const Blog = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 font-mono">
-            <span className="border-b-2 border-white/20 pb-2">BLOG</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">BLOG</span>
           </h2>
 
           <div className="space-y-8">
@@ -47,11 +47,11 @@ const Blog = () => {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="absolute inset-0 border border-white/20 group-hover:border-white/40 transition-colors duration-300">
-                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
+                <div className="absolute inset-0 border border-primary-200 dark:border-dark-700 group-hover:border-primary-300 dark:group-hover:border-dark-600 transition-colors duration-300">
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
                 </div>
 
                 <div className="p-6">
@@ -65,23 +65,23 @@ const Blog = () => {
                     </div>
                     <div className="w-2/3">
                       <div className="mb-4">
-                        <span className="text-white/40 font-mono text-xs uppercase tracking-widest">
+                        <span className="text-primary-500/40 dark:text-dark-400/40 font-mono text-xs uppercase tracking-widest">
                           {post.date}
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-white mb-4 font-mono">
+                      <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono">
                         {post.title}
                       </h3>
 
-                      <p className="text-white/60 mb-6 font-mono text-sm">
+                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-mono text-sm">
                         {post.excerpt}
                       </p>
 
                       <div className="flex items-center justify-end">
                         <motion.a
                           href="#"
-                          className="text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest"
+                          className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
                           whileHover={{ x: 5 }}
                         >
                           Read More →

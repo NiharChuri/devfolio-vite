@@ -26,7 +26,7 @@ const values = [
 
 const Value = () => {
   return (
-    <section id="values" className="min-h-screen bg-black py-20">
+    <section id="values" className="min-h-screen bg-primary-50 dark:bg-dark-900 py-20 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,8 +35,8 @@ const Value = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 font-mono">
-            <span className="border-b-2 border-white/20 pb-2">VALUES</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">VALUES</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -49,19 +49,19 @@ const Value = () => {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="absolute inset-0 border border-white/20 group-hover:border-white/40 transition-colors duration-300">
-                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
+                <div className="absolute inset-0 border border-primary-200 dark:border-dark-700 group-hover:border-primary-300 dark:group-hover:border-dark-600 transition-colors duration-300">
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
                 </div>
 
                 <div className="p-8">
                   <div className="text-4xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-4 font-mono">
+                  <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono">
                     {value.title}
                   </h3>
-                  <p className="text-white/60 font-mono text-sm">
+                  <p className="text-primary-600/60 dark:text-dark-300/60 font-mono text-sm">
                     {value.description}
                   </p>
                 </div>

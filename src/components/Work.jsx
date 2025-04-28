@@ -27,7 +27,7 @@ const projects = [
 
 const Work = () => {
   return (
-    <section id="work" className="min-h-screen bg-black py-20">
+    <section id="work" className="min-h-screen bg-primary-50 dark:bg-dark-900 py-20 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,8 +36,8 @@ const Work = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 font-mono">
-            <span className="border-b-2 border-white/20 pb-2">WORK</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">WORK</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,11 +50,11 @@ const Work = () => {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="absolute inset-0 border border-white/20 group-hover:border-white/40 transition-colors duration-300">
-                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
-                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-white/20 group-hover:bg-white/40 transition-colors duration-300"></div>
+                <div className="absolute inset-0 border border-primary-200 dark:border-dark-700 group-hover:border-primary-300 dark:group-hover:border-dark-600 transition-colors duration-300">
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700 group-hover:bg-primary-300 dark:group-hover:bg-dark-600 transition-colors duration-300"></div>
                 </div>
 
                 <div className="p-6">
@@ -65,17 +65,17 @@ const Work = () => {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4 font-mono">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
                     {project.title}
                   </h3>
-                  <p className="text-white/60 mb-6 font-mono text-sm">
+                  <p className="text-gray-700/60 dark:text-white/60 mb-6 font-mono text-sm">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-white/40 font-mono text-xs uppercase tracking-widest"
+                        className="text-gray-600/40 dark:text-white/40 font-mono text-xs uppercase tracking-widest"
                       >
                         {tech}
                       </span>
@@ -83,7 +83,7 @@ const Work = () => {
                   </div>
                   <motion.a
                     href={project.link}
-                    className="inline-block text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest"
+                    className="inline-block text-gray-800/80 dark:text-white/80 hover:text-gray-900 dark:hover:text-white font-mono text-sm uppercase tracking-widest"
                     whileHover={{ x: 5 }}
                   >
                     View Project →

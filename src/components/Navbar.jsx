@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { id: 'about', label: 'About' },
@@ -54,7 +55,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-b from-black to-transparent' : 'bg-transparent'
+        isScrolled ? 'bg-gradient-to-b from-primary-100 to-transparent dark:from-dark-900 dark:to-transparent' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -67,13 +68,13 @@ const Navbar = () => {
               smoothScrollTo('hero');
             }}
             whileHover={{ scale: 1.05 }}
-            className="text-white font-mono text-xl tracking-wider cursor-pointer"
+            className="text-primary-900 dark:text-dark-50 font-mono text-xl tracking-wider cursor-pointer"
           >
             N.
           </motion.a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map(({ id, label }) => (
               <motion.a
                 key={id}
@@ -82,14 +83,14 @@ const Navbar = () => {
                   e.preventDefault();
                   smoothScrollTo(id);
                 }}
-                className={`relative text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest ${
-                  activeSection === id ? 'text-white' : ''
+                className={`relative text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest ${
+                  activeSection === id ? 'text-primary-900 dark:text-dark-50' : ''
                 }`}
                 whileHover={{ scale: 1.05 }}
               >
                 {label}
                 <motion.span
-                  className="absolute bottom-0 left-0 w-full h-px bg-white"
+                  className="absolute bottom-0 left-0 w-full h-px bg-primary-700 dark:bg-dark-200"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   animate={{ scaleX: activeSection === id ? 1 : 0 }}
@@ -97,50 +98,51 @@ const Navbar = () => {
                 />
               </motion.a>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="flex items-center space-x-4 md:hidden">
+            <ThemeToggle />
+            <button
+              className="text-primary-900 dark:text-dark-50"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <div className="py-4 space-y-4 bg-black/10 backdrop-blur-sm">
-                {navLinks.map(({ id, label }) => (
-                  <motion.a
-                    key={id}
-                    href={`#${id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      smoothScrollTo(id);
-                      setIsMenuOpen(false);
-                    }}
-                    className={`block text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest ${
-                      activeSection === id ? 'text-white' : ''
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    {label}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-primary-100/80 dark:bg-dark-800/80 backdrop-blur-sm"
+          >
+            <div className="container mx-auto px-4 py-4">
+              {navLinks.map(({ id, label }) => (
+                <motion.a
+                  key={id}
+                  href={`#${id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    smoothScrollTo(id);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block py-2 text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
+                >
+                  {label}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

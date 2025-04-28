@@ -22,7 +22,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen bg-black pt-20">
+    <section id="contact" className="min-h-screen bg-primary-50 dark:bg-dark-900 pt-20 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,8 +31,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 font-mono">
-            <span className="border-b-2 border-white/20 pb-2">CONTACT</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">CONTACT</span>
           </h2>
 
           <motion.div
@@ -42,10 +42,10 @@ const Contact = () => {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h3 className="text-2xl font-bold text-white mb-6 font-mono">
-              <span className="border-b border-white/20 pb-1">GET IN TOUCH</span>
+            <h3 className="text-2xl font-bold text-primary-900 dark:text-dark-50 mb-6 font-mono">
+              <span className="border-b border-primary-200 dark:border-dark-700 pb-1">GET IN TOUCH</span>
             </h3>
-            <p className="text-white/60 font-mono mb-12 text-lg">
+            <p className="text-primary-600/60 dark:text-dark-300/60 font-mono mb-12 text-lg">
               Have a project in mind or want to collaborate? Feel free to reach out.
             </p>
             <div className="space-y-6">
@@ -55,7 +55,7 @@ const Contact = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-white/80 hover:text-white font-mono text-sm uppercase tracking-widest transition-colors duration-300"
+                  className="block text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest transition-colors duration-300"
                   whileHover={{ x: 10 }}
                 >
                   {link.text}
