@@ -1,62 +1,81 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-    const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut",
-                staggerChildren: 0.3,
-            },
-        },
-    };
-
-    const textVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-    };
-
-    return (
-        <section
-            id="about"
-            className="flex flex-col min-h-[70vh] lg:min-h-screen items-left justify-center px-4 md:px-6"
+  return (
+    <section id="about" className="min-h-screen bg-black py-20">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
         >
-            <motion.div
-                className="max-w-7xl mx-auto"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 font-mono">
+            <span className="border-b-2 border-white/20 pb-2">ABOUT</span>
+          </h2>
+
+          <div className="space-y-8">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-lg text-white/80 font-mono leading-relaxed"
             >
-                <motion.h2
-                    className="text-lg sm:text-lg lg:text-lg text-center tracking-wide font-bold mb-[10%]"
-                    variants={textVariants}
-                >
-                    About Me
-                </motion.h2>
-                <motion.div>
-                    <motion.p
-                        className="text-sm md:text-sm lg:text-2xl leading-relaxed mb-6"
-                        variants={textVariants}
-                    >
-                        I’m Neel Shah, a software developer specializing in web design and UI/UX, with expertise in frameworks like React.js 
-                        and Tailwind CSS. I focus on creating efficient, scalable, and user-friendly solutions that solve real-world challenges.
-                    </motion.p>
-                    <motion.p
-                        className="text-sm md:text-sm lg:text-2xl leading-relaxed"
-                        variants={textVariants}
-                    >
-                        Currently pursuing a Bachelor’s degree in Computer Science with a specialization in Cybersecurity at Mukesh Patel 
-                        School of Technology Management and Engineering (Class of 2026), I’m passionate about blending innovation with 
-                        functionality to deliver impactful results.
-                    </motion.p>
-                </motion.div>
+              I'm a software engineer with a passion for creating elegant solutions to complex problems. 
+              My journey in technology began with a curiosity about how things work, which evolved into 
+              a deep appreciation for clean, efficient code and user-centered design.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-lg text-white/80 font-mono leading-relaxed"
+            >
+              With experience in both frontend and backend development, I focus on building scalable 
+              applications that deliver exceptional user experiences. I believe in writing code that 
+              is not only functional but also maintainable and well-documented.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="pt-8"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6 font-mono">
+                <span className="border-b border-white/20 pb-1">TECHNICAL SKILLS</span>
+              </h3>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  'JavaScript', 'TypeScript', 'React', 'Node.js',
+                  'Python', 'SQL', 'AWS', 'Docker',
+                  'Git', 'CI/CD', 'REST APIs', 'GraphQL'
+                ].map((skill, index) => (
+                  <motion.div
+                    key={skill}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * index, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-white/80 font-mono text-sm uppercase tracking-widest"
+                  >
+                    {skill}
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
-        </section>
-    );
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
