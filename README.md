@@ -27,7 +27,7 @@ devfolio-vite is a modern, interactive React portfolio website built with Vite a
    ```
 2. Change directory:
    ```bash
-   cd virtualr
+   cd devfolio-vite
    ```
 3. Install dependencies:
    ```bash
@@ -50,7 +50,7 @@ In the project directory, you can run:
 ## Project Structure
 
 ```
-virtualr/
+devfolio-vite/
 ├── public/                 # Static assets and index.html
 ├── src/
 │   ├── assets/             # Images, icons, fonts, etc.
