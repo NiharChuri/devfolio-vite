@@ -1,6 +1,6 @@
-# VirtualR
+# devfolio-vite
 
-VirtualR is a modern, interactive React portfolio website built with Vite and styled with Tailwind CSS. It showcases projects with smooth animations and responsive design using GSAP, Framer Motion, Ant Design components, and more.
+devfolio-vite is a modern, interactive React portfolio website built with Vite and styled with Tailwind CSS. It showcases projects with smooth animations and responsive design using GSAP, Framer Motion, Ant Design components, and more.
 
 ## Features
 
@@ -23,7 +23,7 @@ VirtualR is a modern, interactive React portfolio website built with Vite and st
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/neelshha/virtualr.git
+   git clone https://github.com/neelshha/devfolio-vite.git
    ```
 2. Change directory:
    ```bash
