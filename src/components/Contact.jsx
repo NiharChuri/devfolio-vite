@@ -9,7 +9,7 @@ const Contact = () => {
     },
     {
       text: 'GITHUB',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/neelshha/devfolio-vite.git',
     },
     {
       text: 'LINKEDIN',
