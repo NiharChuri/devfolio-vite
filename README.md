@@ -23,7 +23,7 @@ VirtualR is a modern, interactive React portfolio website built with Vite and st
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/virtualr.git
+   git clone https://github.com/neelshha/virtualr.git
    ```
 2. Change directory:
    ```bash
