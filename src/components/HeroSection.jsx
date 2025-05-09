@@ -59,8 +59,8 @@ const HeroSection = () => {
               <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-primary-200 dark:bg-dark-700"></div>
               <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-primary-200 dark:bg-dark-700"></div>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-900 dark:text-dark-50 font-mono px-8 py-4">
-              NEEL SHAH
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-900 dark:text-dark-50 font-sora px-8 py-4">
+              Nihar Churi
             </h1>
           </motion.div>
 
@@ -70,8 +70,8 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mb-12"
           >
-            <h2 className="text-xl md:text-2xl text-primary-700/80 dark:text-dark-200/80 font-mono uppercase tracking-widest">
-              <span className="border-b border-primary-200 dark:border-dark-700 pb-1">SOFTWARE ENGINEER</span>
+            <h2 className="text-xl md:text-2xl text-primary-700/80 dark:text-dark-200/80 font-sora uppercase tracking-widest">
+              <span className="border-b border-primary-200 dark:border-dark-700 pb-1">Software Developer</span>
             </h2>
           </motion.div>
 
@@ -79,7 +79,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg md:text-xl text-primary-600/60 dark:text-dark-300/60 font-mono max-w-2xl mx-auto mb-12"
+            className="text-lg md:text-xl text-primary-600/60 dark:text-dark-300/60 font-sora max-w-2xl mx-auto mb-12"
           >
             Building digital experiences with a focus on performance, accessibility, and user experience.
           </motion.p>
@@ -92,14 +92,14 @@ const HeroSection = () => {
           >
             <motion.a
               href="#work"
-              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
+              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest"
               whileHover={{ x: 5 }}
             >
               View Work →
             </motion.a>
             <motion.a
               href="#contact"
-              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
+              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest"
               whileHover={{ x: 5 }}
             >
               Contact →

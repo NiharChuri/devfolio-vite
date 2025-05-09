@@ -33,7 +33,7 @@ const Blog = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-sora">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">BLOG</span>
           </h2>
 
@@ -65,23 +65,23 @@ const Blog = () => {
                     </div>
                     <div className="w-2/3">
                       <div className="mb-4">
-                        <span className="text-primary-500/40 dark:text-dark-400/40 font-mono text-xs uppercase tracking-widest">
+                        <span className="text-primary-500/40 dark:text-dark-400/40 font-sora text-xs uppercase tracking-widest">
                           {post.date}
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono">
+                      <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-sora">
                         {post.title}
                       </h3>
 
-                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-mono text-sm">
+                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-sora text-sm">
                         {post.excerpt}
                       </p>
 
                       <div className="flex items-center justify-end">
                         <motion.a
                           href="#"
-                          className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
+                          className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest"
                           whileHover={{ x: 5 }}
                         >
                           Read More →

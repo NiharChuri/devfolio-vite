@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['JetBrains Mono', 'monospace'],
+        sora: ["Sora", 'sans-serif'],
       },
       colors: {
         // Light mode colors
@@ -45,9 +45,9 @@ export default {
           400: '#94a3b8',
           500: '#64748b',
           600: '#475569',
-          700: '#334155',
+          700: '#3d9cf5',
           800: '#1e293b',
-          900: '#0f172a',
+          900: '#181818',
         },
         darkAccent: {
           50: '#f0f9ff',

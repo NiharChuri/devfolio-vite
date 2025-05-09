@@ -4,20 +4,20 @@ import { motion } from 'framer-motion';
 const Contact = () => {
   const contactLinks = [
     {
-      text: 'neelshha@gmail.com',
-      href: 'mailto:neelshha@gmail.com',
+      text: 'E-mail',
+      href: 'mailto:nihar.churi@gmail.com',
     },
     {
-      text: 'GITHUB',
-      href: 'https://github.com/neelshha/devfolio-vite.git',
+      text: 'GitHub',
+      href: 'https://github.com/niharchuri',
     },
     {
-      text: 'LINKEDIN',
-      href: 'https://linkedin.com/in/yourusername',
+      text: 'LinkedIn',
+      href: 'https://linkedin.com/in/NiharChuri',
     },
     {
-      text: 'INSTAGRAM',
-      href: 'https://linkedin.com/in/yourusername',
+      text: 'Instagram',
+      href: 'https://instagram.com/niharchuri',
     },
   ];
 
@@ -31,7 +31,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-sora">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">CONTACT</span>
           </h2>
 
@@ -42,10 +42,10 @@ const Contact = () => {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h3 className="text-2xl font-bold text-primary-900 dark:text-dark-50 mb-6 font-mono">
+            <h3 className="text-2xl font-bold text-primary-900 dark:text-dark-50 mb-6 font-sora">
               <span className="border-b border-primary-200 dark:border-dark-700 pb-1">GET IN TOUCH</span>
             </h3>
-            <p className="text-primary-600/60 dark:text-dark-300/60 font-mono mb-12 text-lg">
+            <p className="text-primary-600/60 dark:text-dark-300/60 font-sora mb-12 text-lg">
               Have a project in mind or want to collaborate? Feel free to reach out.
             </p>
             <div className="space-y-6">
@@ -55,7 +55,7 @@ const Contact = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest transition-colors duration-300"
+                  className="block text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest transition-colors duration-300"
                   whileHover={{ x: 10 }}
                 >
                   {link.text}

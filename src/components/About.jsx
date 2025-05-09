@@ -12,7 +12,7 @@ const About = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-sora">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">ABOUT</span>
           </h2>
 
@@ -22,7 +22,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-lg text-primary-700/80 dark:text-dark-200/80 font-mono leading-relaxed"
+              className="text-lg text-primary-700/80 dark:text-dark-200/80 font-sora leading-relaxed"
             >
               I'm a software engineer with a passion for creating elegant solutions to complex problems. 
               My journey in technology began with a curiosity about how things work, which evolved into 
@@ -34,7 +34,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-lg text-primary-700/80 dark:text-dark-200/80 font-mono leading-relaxed"
+              className="text-lg text-primary-700/80 dark:text-dark-200/80 font-sora leading-relaxed"
             >
               With experience in both frontend and backend development, I focus on building scalable 
               applications that deliver exceptional user experiences. I believe in writing code that 
@@ -48,15 +48,15 @@ const About = () => {
               viewport={{ once: true }}
               className="pt-8"
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-sora">
                 <span className="border-b border-gray-800 dark:border-white/20 pb-1">TECHNICAL SKILLS</span>
               </h3>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  'JavaScript', 'TypeScript', 'React', 'Node.js',
-                  'Python', 'SQL', 'AWS', 'Docker',
-                  'Git', 'CI/CD', 'REST APIs', 'GraphQL'
+                  'Python', 'TypeScript', 'ReactJS', 'Node.js',
+                  'JavaScript', 'SQL', 'AstroJS', 'C++',
+                  'Git', 'DaVinci Resolve'
                 ].map((skill, index) => (
                   <motion.div
                     key={skill}
@@ -64,7 +64,7 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 * index, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-gray-800/80 dark:text-white/80 font-mono text-sm uppercase tracking-widest"
+                    className="text-gray-800/80 dark:text-white/80 font-sora text-sm uppercase tracking-widest"
                   >
                     {skill}
                   </motion.div>

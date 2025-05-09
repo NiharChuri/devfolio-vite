@@ -35,7 +35,7 @@ const Value = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-sora">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">VALUES</span>
           </h2>
 
@@ -58,10 +58,10 @@ const Value = () => {
 
                 <div className="p-8">
                   <div className="text-4xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono">
+                  <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-sora">
                     {value.title}
                   </h3>
-                  <p className="text-primary-600/60 dark:text-dark-300/60 font-mono text-sm">
+                  <p className="text-primary-600/60 dark:text-dark-300/60 font-sora text-sm">
                     {value.description}
                   </p>
                 </div>

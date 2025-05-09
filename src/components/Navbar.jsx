@@ -6,8 +6,8 @@ import ThemeToggle from './ThemeToggle';
 const navLinks = [
   { id: 'about', label: 'About' },
   { id: 'work', label: 'Work' },
-  { id: 'blog', label: 'Blog' },
-  { id: 'values', label: 'Values' },
+  // { id: 'blog', label: 'Blog' },
+  // { id: 'values', label: 'Values' },
   { id: 'contact', label: 'Contact' }
 ];
 
@@ -68,9 +68,9 @@ const Navbar = () => {
               smoothScrollTo('hero');
             }}
             whileHover={{ scale: 1.05 }}
-            className="text-primary-900 dark:text-dark-50 font-mono text-xl tracking-wider cursor-pointer"
+            className="text-primary-900 dark:text-dark-50 font-sora text-xl tracking-wider cursor-pointer"
           >
-            N.
+            NC.
           </motion.a>
 
           {/* Desktop Menu */}
@@ -83,7 +83,7 @@ const Navbar = () => {
                   e.preventDefault();
                   smoothScrollTo(id);
                 }}
-                className={`relative text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest ${
+                className={`relative text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest ${
                   activeSection === id ? 'text-primary-900 dark:text-dark-50' : ''
                 }`}
                 whileHover={{ scale: 1.05 }}
@@ -134,7 +134,7 @@ const Navbar = () => {
                     smoothScrollTo(id);
                     setIsMenuOpen(false);
                   }}
-                  className="block py-2 text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
+                  className="block py-2 text-primary-700/80 hover:text-primary-900 dark:text-dark-200/80 dark:hover:text-dark-50 font-sora text-sm uppercase tracking-widest"
                 >
                   {label}
                 </motion.a>
