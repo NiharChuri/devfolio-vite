@@ -81,7 +81,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-lg md:text-xl text-primary-600/60 dark:text-dark-300/60 font-sora max-w-2xl mx-auto mb-12"
           >
-            Building digital experiences with a focus on performance, accessibility, and user experience.
+            Developing fast, scalable interfaces with an emphasis on performance, maintainability, and modern web standards.
           </motion.p>
 
           <motion.div

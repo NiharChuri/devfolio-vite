@@ -1,5 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SiPython, SiTypescript, SiReact, SiNodedotjs, SiJavascript, SiMysql, SiAstro, SiCplusplus, SiGit, SiDavinciresolve } from 'react-icons/si';
+
+const skills = [
+  { name: 'Python', icon: <SiPython /> },
+  { name: 'TypeScript', icon: <SiTypescript /> },
+  { name: 'ReactJS', icon: <SiReact /> },
+  { name: 'Node.js', icon: <SiNodedotjs /> },
+  { name: 'JavaScript', icon: <SiJavascript /> },
+  { name: 'SQL', icon: <SiMysql /> },
+  { name: 'AstroJS', icon: <SiAstro /> },
+  { name: 'C++', icon: <SiCplusplus /> },
+  { name: 'Git', icon: <SiGit /> },
+  { name: 'DaVinci Resolve', icon: <SiDavinciresolve /> },
+];
+
+
 
 const About = () => {
   return (
@@ -13,7 +29,7 @@ const About = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-sora">
-            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">ABOUT</span>
+            <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">About</span>
           </h2>
 
           <div className="space-y-8">
@@ -24,12 +40,10 @@ const About = () => {
               viewport={{ once: true }}
               className="text-lg text-primary-700/80 dark:text-dark-200/80 font-sora leading-relaxed"
             >
-              I'm a software engineer with a passion for creating elegant solutions to complex problems. 
-              My journey in technology began with a curiosity about how things work, which evolved into 
-              a deep appreciation for clean, efficient code and user-centered design.
+              I'm a frontend-focused software engineer with a strong emphasis on performance, scalability, and visual clarity. My work centers around building responsive interfaces, implementing precise UI behavior, and maintaining clean, maintainable code. I approach each project with attention to detail and a commitment to quality.
             </motion.p>
 
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -39,7 +53,7 @@ const About = () => {
               With experience in both frontend and backend development, I focus on building scalable 
               applications that deliver exceptional user experiences. I believe in writing code that 
               is not only functional but also maintainable and well-documented.
-            </motion.p>
+            </motion.p> */}
 
             <motion.div
               initial={{ opacity: 0 }}
@@ -53,23 +67,22 @@ const About = () => {
               </h3>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {[
-                  'Python', 'TypeScript', 'ReactJS', 'Node.js',
-                  'JavaScript', 'SQL', 'AstroJS', 'C++',
-                  'Git', 'DaVinci Resolve'
-                ].map((skill, index) => (
-                  <motion.div
-                    key={skill}
+                {skills.map((skill, index) => (
+                  <motion.a
+                    key={skill.name}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * index, duration: 0.5 }}
+                    // transition={{ delay: 0.1 * index, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-gray-800/80 dark:text-white/80 font-sora text-sm uppercase tracking-widest"
+                    className="flex items-center gap-2 text-gray-800/80 dark:text-white/80 font-sora text-sm uppercase tracking-widest"
+                    whileHover={{scale: 1.05}}
                   >
-                    {skill}
-                  </motion.div>
+                    <span className="text-xl">{skill.icon}</span>
+                    {skill.name}
+                  </motion.a>
                 ))}
               </div>
+
             </motion.div>
           </div>
         </motion.div>

@@ -3,25 +3,25 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Project One',
+    title: 'MumbaiMUN Website',
     description: 'A modern web application built with React and Node.js',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    link: '#',
+    technologies: ['React', 'Node.js', 'TailwindCSS'],
+    link: 'https://www.mumbaimun.com',
     image: '/images/munsoc.png'
   },
   {
-    title: 'Project Two',
-    description: 'An e-commerce platform with real-time inventory management',
-    technologies: ['TypeScript', 'Next.js', 'PostgreSQL'],
-    link: '#',
-    image: '/images/munsoc.jpg'
+    title: 'Taqneeq fest Website',
+    description: "A website for NMIMS' Techfest",
+    technologies: ['React', 'Node.js', 'TailwindCSS'],
+    link: 'https://www.taqneeqfest.com/',
+    image: '/images/taqneeq.png'
   },
   {
-    title: 'Project Three',
-    description: 'A data visualization dashboard for business analytics',
-    technologies: ['D3.js', 'Python', 'AWS'],
-    link: '#',
-    image: '/images/munsoc.jpg'
+    title: 'Social Conclave Website',
+    description: 'A website for a environmental debate competition (down for maintenance)',
+    technologies: ['Next.js'],
+    link: 'https://www.socialconclave.in',
+    image: '/images/conclave.jpeg'
   }
 ];
 
@@ -65,7 +65,7 @@ const Work = () => {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 font-sora">
+                  <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4 font-sora">
                     {project.title}
                   </h3>
                   <p className="text-gray-700/60 dark:text-white/60 mb-6 font-sora text-sm">
@@ -75,7 +75,7 @@ const Work = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-gray-600/40 dark:text-white/40 font-sora text-xs uppercase tracking-widest"
+                        className="text-primary-900/40 dark:text-dark-100/40 font-sora text-xs uppercase tracking-widest"
                       >
                         {tech}
                       </span>

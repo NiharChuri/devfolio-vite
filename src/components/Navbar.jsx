@@ -67,10 +67,10 @@ const Navbar = () => {
               e.preventDefault();
               smoothScrollTo('hero');
             }}
-            whileHover={{ scale: 1.05 }}
-            className="text-primary-900 dark:text-dark-50 font-sora text-xl tracking-wider cursor-pointer"
+            whileHover={{ scale: 1.07 }}
+            className="text-primary-900 dark:text-dark-50 font-sora text-xl tracking-wider cursor-pointer font-semibold"
           >
-            NC.
+            Nihar. C
           </motion.a>
 
           {/* Desktop Menu */}

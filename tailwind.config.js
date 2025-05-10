@@ -13,17 +13,18 @@ export default {
       colors: {
         // Light mode colors
         primary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50:  '#fffdf9',   // darker mint wash
+          100: '#b3dab8',   // muted mint
+          200: '#8dcf99',   // leafy pastel
+          300: '#6fc47f',   // darker soft green
+          400: '#54b268',   // rich mid pastel green
+          500: '#419457',   // strong earthy green
+          600: '#357a47',   // solid dark olive green
+          700: '#2d613a',   // deep forest green
+          800: '#244d30',   // iPhone 13 deep green
+          900: '#1a3823',   // darkest usable green
         },
+
         accent: {
           50: '#f0f9ff',
           100: '#e0f2fe',
